@@ -1,0 +1,12 @@
+A snap framework extension for using the blaze-html and digestive-functors-snap
+packages in a snap application.
+
+Snap Framework:
+http://snapframework.com
+https://github.com/snapframework
+
+Blaze HTML:
+http://jaspervdj.be/posts/2011-01-16-blazehtml-0.4.html
+
+Digestive Functors:
+http://jaspervdj.be/posts/2010-12-09-digestive-functors-0.0.2.html
