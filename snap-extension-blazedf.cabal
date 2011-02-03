@@ -1,0 +1,45 @@
+Name:                snap-extension-blazedf
+Version:             0.4.0.0
+Synopsis:            Blaze HTML digestive functors snap extension
+Description:         A snap framework extension for using the blaze-html and digestive-functors-snap
+                     packages in a snap application.
+
+Homepage:            https://github.com/markwright/snap-extension-blazedf
+License:             BSD3
+License-file:        LICENSE
+Author:              Mark Wright
+Maintainer:          markwright@internode.on.net
+Stability:           experimental
+Copyright:           Copyright (c) Mark Wright 2010-2011. All rights reserved.
+Category:            Web
+Build-type:          Simple
+Cabal-version:       >=1.2
+source-repository    head
+  type:              git
+  location:          git://github.com/markwright/snap-extension-blazedf.git
+
+Library
+  Hs-Source-Dirs:    src
+  Exposed-modules:   Snap.Extension.BlazeDF
+  Build-depends:       
+    base >= 4 && < 5,
+    blaze-builder,
+    blaze-html,
+    bytestring >= 0.9.1 && < 0.10,
+    digestive-functors,
+    digestive-functors-blaze,
+    digestive-functors-snap,
+    MonadCatchIO-transformers >= 0.2.1 && < 0.3,
+    mtl >= 2 && < 3,
+    snap == 0.4.*,
+    snap-core == 0.4.*,
+    snap-server == 0.4.*,
+    text >= 0.11 && < 0.12,
+    time >= 1.1 && < 1.3
+
+  if impl(ghc >= 6.12.0)
+    ghc-options: -threaded -Wall -fwarn-tabs -funbox-strict-fields -O2
+                 -fno-warn-unused-do-bind
+  else
+    ghc-options: -threaded -Wall -fwarn-tabs -funbox-strict-fields -O2
+  
