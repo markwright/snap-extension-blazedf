@@ -1,4 +1,5 @@
 -- Copyright (c)2011, Mark Wright.  All rights reserved.
+{-# LANGUAGE Rank2Types #-}
 
 -- | A snap extension interface to blaze-html and digestive-functors-snap
 
@@ -31,7 +32,7 @@ class MonadSnap m => MonadBlazeDF m where
   renderHtml :: Html -> m BL.ByteString
 
   -- | Provide the digestive-functors-snap eitherSnapForm function.
-  eitherSnapForm :: DFS.SnapForm m e v a -> String -> m (Either v a)
+  eitherSnapForm :: DFS.SnapForm e v a -> String -> m (Either v a)
 
 -- | The blaze-html digestive-functors-snap state.
 data BlazeDFState = BlazeDFState
