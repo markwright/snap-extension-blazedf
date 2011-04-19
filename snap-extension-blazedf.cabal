@@ -1,5 +1,5 @@
 Name:                snap-extension-blazedf
-Version:             0.4.0.0
+Version:             0.4.1.0
 Synopsis:            Blaze HTML digestive functors snap extension
 Description:         A snap framework extension for using the blaze-html and digestive-functors-snap
                      packages in a snap application.
@@ -23,17 +23,17 @@ Library
   Exposed-modules:   Snap.Extension.BlazeDF
   Build-depends:       
     base >= 4 && < 5,
-    blaze-builder,
-    blaze-html,
+    blaze-builder >= 0.2 && < 0.4,
+    blaze-html >= 0.4.1 && < 0.5,
     bytestring >= 0.9.1 && < 0.10,
-    digestive-functors,
-    digestive-functors-blaze,
-    digestive-functors-snap,
+    digestive-functors >= 0.0.2.1 && < 0.1,
+    digestive-functors-blaze >= 0.0.2.0 && < 0.1,
+    digestive-functors-snap >= 0.0.2.1 && < 0.1,
     MonadCatchIO-transformers >= 0.2.1 && < 0.3,
-    mtl >= 2 && < 3,
-    snap == 0.4.*,
-    snap-core == 0.4.*,
-    snap-server == 0.4.*,
+    mtl >= 2.0 && < 2.1,
+    snap >= 0.4.1 && < 0.5,
+    snap-core == 0.4.1 && < 0.5,
+    snap-server == 0.4.1 && < 0.5,
     text >= 0.11 && < 0.12,
     time >= 1.1 && < 1.3
 
